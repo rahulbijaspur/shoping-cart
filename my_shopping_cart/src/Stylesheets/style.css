@@ -1,0 +1,369 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* css general */
+/* root variables */
+:root {
+  --primary: rgb(234, 191, 0);
+  --bg: rgb(255, 255, 255);
+  --text-light: rgb(156, 155, 155);
+  --text-dark: rgb(0, 0, 0);
+  --secondary: rgb(39, 39, 39);
+}
+
+/* my styles */
+html {
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* GENERAL STYLE */
+body {
+  line-height: 1.5;
+}
+
+.flex {
+  display: flex;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.item-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.container {
+  max-width: 1370px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.heading{
+  text-align: center;
+  font-size: 2rem;
+  margin: 1.5rem;
+  font-weight: 600;
+}
+.heading:hover{
+  color: var(--primary);
+}
+.aside {
+  width: 20%;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.aside span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.aside button {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  margin: 0.7rem;
+}
+
+.aside button:hover{
+  background-color: var(--primary);
+  color: var(--bg);
+}
+.header {
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.all-product {
+  width: 80%;
+}
+
+.product {
+  width: 24%;
+  /* height: 56vh; */
+  padding: 0.5rem 0;
+  margin-left: 0.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.product:hover{
+  box-shadow: 0 0 10px var(--text-light);
+}
+.product img {
+  width: 200px;
+}
+
+.title {
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.price {
+  border-top: 1px solid var(--primary);
+  padding: 0.2rem;
+  width: 2rem;
+
+  margin: 0.8rem auto;
+}
+
+.product button {
+  padding: 1rem 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 1rem;
+  background-color: var(--text-dark);
+  color: var(--bg);
+  border: none;
+  cursor: pointer;
+}
+.product button:hover {
+  background-color: var(--primary);
+}
+
+/* Cart */
+
+.display {
+  display: block;
+}
+
+.none {
+  display: none;
+}
+
+.cart {
+  background-color: var(--secondary);
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+}
+
+.cart img {
+  padding: 1rem;
+}
+
+.cart-close {
+  width: 400px;
+  background-color: var(--secondary);
+}
+
+.cart-close h3 {
+  font-size: 1.7rem;
+  margin-left: 40%;
+  color: var(--bg);
+}
+
+.cart-item {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--secondary);
+  color:var(--bg);
+}
+
+.cart-item img {
+  width: 90px;
+  padding: 0;
+}
+
+.cart-imgs img {
+  background-color: var(--text-dark);
+}
+
+.btn-delete button {
+  background-color: var(--secondary);
+  cursor: pointer;
+  border: none;
+}
+
+.prices p {
+  color: var(--primary);
+}
+
+.prices button {
+  font-size: 1rem;
+  background-color: var(--text-dark);
+  color: var(--bg);
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.scroll {
+  overflow-y: scroll;
+  height: 500px;
+}
+
+.checkout {
+  position: fixed;
+  bottom: 1rem;
+  color: var(--bg);
+}
+
+.checkout div {
+  padding: 2rem;
+}
+
+.checkout p {
+  color: var(--primary);
+}
+
+.checkout button {
+  width: 400px;
+  padding: 1rem;
+  background-color: var(--text-dark);
+  border: none;
+  cursor: pointer;
+  color: var(--bg);
+}
